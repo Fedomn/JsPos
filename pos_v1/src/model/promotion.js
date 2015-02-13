@@ -1,3 +1,4 @@
-/**
- * Created by fedomn on 2015/2/13.
- */
+function Promotion(type, barcode){
+    this.type = type;
+    this.barcode = barcode || '';
+}

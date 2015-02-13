@@ -16,8 +16,9 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             "lib/underscore.js",
-            "pos_v0.2/src/*.js",
-            "pos_v0.2/spec/*.js"
+            "pos_v1/src/*.js",
+            "pos_v1/src/*/*.js",
+            "pos_v1/spec/*.js"
         ],
 
 
