@@ -11,7 +11,7 @@ function printInventory(inputs) {
             ',单价:' + inputs[item].price +
             '.00(元),小计:' +
             itemSumPrice + '.00(元)\n';
-        inventoryPrintResult += itemPrintResult
+        inventoryPrintResult += itemPrintResult;
     }
 
     inventoryPrintResult =  '***<没钱赚商店>购物清单***\n' +
