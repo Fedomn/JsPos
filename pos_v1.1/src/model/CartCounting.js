@@ -57,12 +57,10 @@ CartCounting.prototype.getSavedMoney = function (cartItem, cartPromotionItemsLis
 };
 
 CartCounting.prototype.isPromotionItem = function (cartItem, cartPromotionItemsList) {
-    if(_.find(cartPromotionItemsList, function (item) {
-            return item.barcode === cartItem.barcode;
-        })){
-        return true;
-    }
-    return false;
+    return !!_.find(cartPromotionItemsList, function (item) {
+        return item.barcode === cartItem.barcode;
+    });
+
 };
 
 CartCounting.prototype.getFreeItemCount = function (cartItem, cartPromotionItemsList) {
