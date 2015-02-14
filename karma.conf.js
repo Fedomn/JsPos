@@ -15,11 +15,12 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            "lib/underscore.js",
-            "pos_v1/spec/fixtures.js",
-            "pos_v1/src/*.js",
-            "pos_v1/src/model/*.js",
-            "pos_v1/spec/*.js"
+            "lib/moment-2.9.0/moment-with-locales.js",
+            "lib/lodash-3.2.0/lodash.js",
+            "pos_v1.1/spec/fixtures.js",
+            "pos_v1.1/spec/main-spec.js",
+            "pos_v1.1/src/*.js",
+            "pos_v1.1/src/model/*.js"
         ],
 
 
