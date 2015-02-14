@@ -1,8 +1,4 @@
 function printInventory(inputs) {
-    //var i = new Item(loadAllItems());
-    //var p = new Promotion(loadPromotions());
-    //var c = new CartCounting(i, p);
-
     var c = new CartCounting();
     var cartItemsList = c.getCartItemsList(inputs);
     var cartPromotionItemsList = c.getCartPromotionItemsList(cartItemsList);
