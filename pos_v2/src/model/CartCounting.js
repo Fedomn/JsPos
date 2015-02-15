@@ -22,10 +22,10 @@ CartCounting.prototype.itemsInitialize = function (inputs, items, promotions) {
         };
     });
     _.times(map.length, function (i) {
-        var newItem;
-        if (newItem = _.find(items, function (item) {
-                return item.barcode === map[i].barcode;
-            })) {
+        var newItem = _.find(items, function (item) {
+            return item.barcode === map[i].barcode;
+        });
+        if (newItem) {
             var good = new Item(newItem.barcode, newItem.name, newItem.unit, newItem.price);
             good.count = map[i].count;
             cartItems.push(good);
