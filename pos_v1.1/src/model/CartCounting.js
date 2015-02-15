@@ -1,7 +1,7 @@
 function CartCounting(item, promotion) {
     this.cartItem = item;
     this.cartPromotion = promotion;
-    this.cartItemsSumPrice = 0;
+    this.cartTotalPrice = 0;
     this.cartPromotionItemsPrice = 0;
 }
 
@@ -40,7 +40,7 @@ CartCounting.prototype.cartItemsString = function (cartItemsList, cartPromotionI
     for(var i = 0; i < cartItemsList.length; i++) {
 
         var itemSumPrice = cartItemsList[i].count * cartItemsList[i].price - this.getSavedMoney(cartItemsList[i], cartPromotionItemsList);
-        this.cartItemsSumPrice += itemSumPrice;
+        this.cartTotalPrice += itemSumPrice;
         cartItemsString +=  '名称:' + cartItemsList[i].name +
                             ',数量:' + cartItemsList[i].count + cartItemsList[i].unit +
                             ',单价:' + cartItemsList[i].price.toFixed(2) +
@@ -81,7 +81,7 @@ CartCounting.prototype.cartPromotionItemsString = function (cartPromotionItemsLi
 };
 
 CartCounting.prototype.priceCounting = function () {
-    return '总计:' + this.cartItemsSumPrice.toFixed(2) + '(元)\n' +
+    return '总计:' + this.cartTotalPrice.toFixed(2) + '(元)\n' +
             '节省:' + this.cartPromotionItemsPrice.toFixed(2) + '(元)\n' +
             '**********************';
 };

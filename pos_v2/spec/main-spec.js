@@ -1,4 +1,4 @@
-describe('pos_v1.1', function () {
+describe('pos_v2', function () {
     var allItems, inputs, dateDigitToString;
 
     beforeEach(function () {
